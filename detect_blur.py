@@ -2,10 +2,12 @@
 from imutils import paths
 import argparse
 import cv2
+import numpy as np
+import matplotlib.pyplot as plt
 
 
-def variance_of_laplacian(image):
-    return cv2.Laplacian(image, cv2.CV_64F).var()
+def variance_of_laplacian(i):
+    return cv2.Laplacian(i, cv2.CV_64F).var()
 
 ap = argparse.ArgumentParser();
 ap.add_argument("-i", "--images", required=True,
